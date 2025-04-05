@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SimpleDemoApplication</string>
+    <string name="email_id">Email Id</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    <string name="ask_remove_from_favorites">Are you sure you want to remove this post from favorites?</string>
+    <string name="posts">Posts</string>
+    <string name="favorites">Favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+    <string name="added_to_favorites">Added to favorites</string>
+</resources>
