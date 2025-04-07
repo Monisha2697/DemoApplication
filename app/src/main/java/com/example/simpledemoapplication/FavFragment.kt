@@ -101,7 +101,7 @@ class FavFragment : Fragment() {
 
     }
 
-    fun isNetworkAvailable(requireContext: Context): Boolean {
+    private fun isNetworkAvailable(requireContext: Context): Boolean {
         val connectivityManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         return connectivityManager.activeNetworkInfo?.isConnected == true
     }
