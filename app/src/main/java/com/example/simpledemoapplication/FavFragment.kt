@@ -76,16 +76,15 @@ class FavFragment : Fragment() {
         itemTouchHelper.attachToRecyclerView(binding.recyclerView)
 
         if (isNetworkAvailable(requireContext())) {
-            // Online: collect from flow
             viewLifecycleOwner.lifecycleScope.launch {
                 viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                     viewModel.favorites.collectLatest { favorites ->
                         adapter.submitList(favorites.toList())
+
                     }
                 }
             }
         } else {
-            // Offline: load from SharedPreferences
             val sharedPrefManager = SharedPrefManager(requireContext())
             val allPosts = sharedPrefManager.getPosts()
             val favoriteIds = sharedPrefManager.getFavorites()
